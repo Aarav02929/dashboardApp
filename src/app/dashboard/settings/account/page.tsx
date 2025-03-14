@@ -18,11 +18,10 @@ const AccountSettings = () => {
     setError("");
 
     try {
-      // Add your API call here
-      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate API call
+      await new Promise((resolve) => setTimeout(resolve, 1000)); // Simulate A
       router.push("/dashboard/settings");
-    } catch (_) {
-      setError("Failed to update settings. Please try again.");
+    } catch (error) {
+      setError(`Failed to update settings. Please try again. Error: ${error}`);
     } finally {
       setIsLoading(false);
     }
